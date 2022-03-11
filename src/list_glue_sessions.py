@@ -4,8 +4,8 @@ def main():
     print('\nStarting list_glue_sessions.py ...')
 
     profile_name = 'default'
-    region_name = 'us-west-2'
-    glue_session_ids = glue_util.get_glue_session_ids(profile_name, region_name)
+    target_region = 'us-west-2'
+    glue_session_ids = glue_util.get_glue_session_ids(profile_name, target_region)
     num_glue_session_ids = len(glue_session_ids)
 
     print("glue_session_ids: ")
