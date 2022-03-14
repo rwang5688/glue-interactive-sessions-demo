@@ -1,4 +1,3 @@
-import os
 import logging
 import boto3
 from botocore.exceptions import ClientError
@@ -50,3 +49,4 @@ def delete_glue_sessions(profile_name, region_name, glue_session_ids_to_delete):
         return False
 
     return True
+
