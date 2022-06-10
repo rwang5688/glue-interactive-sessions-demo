@@ -17,16 +17,16 @@ def get_glue_session_ids(profile_name, region_name):
 
     glue = get_glue_client(profile_name, region_name)
     if glue is None:
-        print('get_glue_sessions: Failed to get glue client.')
+        print('get_glue_session_ids: Failed to get glue client.')
         return glue_session_ids
 
     try:
         response = glue.list_sessions()
-        print('DEBUG: get_glue_sessions: glue.list_sessions() response: %s' % (response))
+        print('DEBUG: get_glue_session_ids: glue.list_sessions() response: %s' % (response))
         glue_session_ids = response['Ids']
         
     except ClientError as e:
-        logging.error("get_glue_sessions: unexpected error: ")
+        logging.error("get_glue_session_ids: unexpected error: ")
         logging.exception(e)
         return glue_session_ids
 
